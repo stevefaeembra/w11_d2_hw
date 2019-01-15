@@ -1,4 +1,4 @@
-public abstract class Stall {
+public abstract class Stall implements ITicketed {
 
 	private String name;
 	private String ownerName;

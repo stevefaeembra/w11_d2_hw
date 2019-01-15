@@ -2,6 +2,7 @@
 class ThemePark {
   ArrayList<Attraction> attractions
   ArrayList<Stall> stalls
+  visit(Visitor, Attraction)
 }
 
 class Visitor {
@@ -70,6 +71,7 @@ Stall <|-- CandyFlossStall
 
 IReviewed <|-- Attraction
 IReviewed <|-- Stall
+
 
 ISecurity <|-- Playground
 ISecurity <|-- TobaccoStall
