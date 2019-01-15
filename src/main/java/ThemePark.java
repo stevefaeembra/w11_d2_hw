@@ -19,4 +19,8 @@ public class ThemePark {
 		return stalls;
 	}
 
+	public boolean visit(Visitor visitor, Attraction attraction) {
+		return false;
+	}
+
 }

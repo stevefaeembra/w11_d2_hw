@@ -1,4 +1,4 @@
-public class TobaccoStall extends Stall{
+public class TobaccoStall extends Stall implements  ISecurity {
 
 	public TobaccoStall(String name, String ownerName, String parkingSpot) {
 		super(name, ownerName, parkingSpot);
@@ -16,4 +16,8 @@ public class TobaccoStall extends Stall{
 	}
 
 
+	@Override
+	public boolean isAllowed(Visitor v) {
+		return false;
+	}
 }

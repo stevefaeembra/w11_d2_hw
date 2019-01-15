@@ -1,4 +1,4 @@
-public class RollerCoaster extends Attraction implements ITicketed {
+public class RollerCoaster extends Attraction implements ITicketed, ISecurity {
 	public RollerCoaster(String name) {
 		super(name);
 	};
@@ -13,4 +13,8 @@ public class RollerCoaster extends Attraction implements ITicketed {
 		return 0;
 	}
 
+	@Override
+	public boolean isAllowed(Visitor v) {
+		return false;
+	}
 }
