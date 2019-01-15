@@ -17,4 +17,9 @@ public class RollerCoaster extends Attraction implements ITicketed, ISecurity {
 	public boolean isAllowed(Visitor v) {
 		return false;
 	}
+
+	@Override
+	public int getRating() {
+		return 0;
+	}
 }

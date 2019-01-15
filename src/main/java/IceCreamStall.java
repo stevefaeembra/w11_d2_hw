@@ -6,7 +6,7 @@ public class IceCreamStall extends Stall{
 
 	@Override
 	public double defaultPrice() {
-		return 0;
+		return 2.80;
 	}
 
 	@Override

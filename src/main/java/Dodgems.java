@@ -5,7 +5,7 @@ public class Dodgems extends Attraction implements ITicketed {
 
 	@Override
 	public double defaultPrice() {
-		return 0;
+		return 4.50;
 	}
 
 	@Override
@@ -13,4 +13,8 @@ public class Dodgems extends Attraction implements ITicketed {
 		return 0;
 	}
 
+	@Override
+	public int getRating() {
+		return 0;
+	}
 }

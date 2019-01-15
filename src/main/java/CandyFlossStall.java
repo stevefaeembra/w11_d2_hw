@@ -1,4 +1,4 @@
-public class CandyFlossStall extends Stall{
+public class CandyFlossStall extends Stall {
 
 	public CandyFlossStall(String name, String ownerName, String parkingSpot) {
 		super(name, ownerName, parkingSpot);
@@ -6,7 +6,7 @@ public class CandyFlossStall extends Stall{
 
 	@Override
 	public double defaultPrice() {
-		return 0;
+		return 2.80;
 	}
 
 	@Override
