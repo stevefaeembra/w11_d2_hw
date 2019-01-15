@@ -1,0 +1,81 @@
+@startuml
+class ThemePark {
+  ArrayList<Attraction> attractions
+  ArrayList<Stall> stalls
+}
+
+class Visitor {
+  int age
+  int height
+  double money
+}
+
+abstract class Stall {
+  String name
+  String ownerName
+  String parkingSpot
+}
+
+class IceCreamStall {
+}
+
+class CandyFlossStall {
+}
+
+class TobaccoStall {
+}
+
+
+abstract class Attraction {
+  String name
+}
+
+class RollerCoaster {
+}
+
+class Dodgems {
+}
+
+class Park {
+}
+
+class Playground {
+}
+
+Interface ITicketed {
+  defaultPrice() : double
+  priceFor(Visitor) : double
+}
+
+Interface ISecurity {
+  isAllowedTo(Visitor): boolean
+}
+
+Interface IReviewed {
+  getRating(): int
+  getName(): String
+}
+
+
+
+ThemePark *-- Attraction : has_many
+ITicketed <|-- Stall
+Attraction <|-- RollerCoaster
+Attraction <|-- Dodgems
+Attraction <|-- Park
+Attraction <|-- Playground
+Stall <|-- TobaccoStall
+Stall <|-- IceCreamStall
+Stall <|-- CandyFlossStall
+
+IReviewed <|-- Attraction
+IReviewed <|-- Stall
+
+ISecurity <|-- Playground
+ISecurity <|-- TobaccoStall
+ISecurity <|-- RollerCoaster
+
+ITicketed <|-- RollerCoaster : implements
+ITicketed <|-- Dodgems : implements
+ThemePark o-- Stall : has_many
+@enduml
